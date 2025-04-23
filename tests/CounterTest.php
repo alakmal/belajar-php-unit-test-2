@@ -3,6 +3,7 @@
 
 namespace Alyou\BelajarPhpUnitTest2;
 
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 class CounterTest extends TestCase
@@ -13,6 +14,9 @@ class CounterTest extends TestCase
     {
         $counter = new Counter();
         $counter->increment();
-        echo $counter->getCounter() . PHP_EOL;
+        Assert::assertEquals(
+            1,
+            $counter->getCounter()
+        );
     }
 }
