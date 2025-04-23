@@ -13,6 +13,25 @@ class CounterTest extends TestCase
     {
         $counter = new Counter();
         $counter->increment();
-        echo $counter->getCounter() . PHP_EOL;
+        $this->assertEquals(1, $counter->getCounter());
+    }
+
+    public function testFirst(): Counter
+    {
+        $counter = new Counter();
+        $counter->increment();
+        $this->assertEquals(1, $counter->getCounter());
+        return $counter;
+    }
+
+
+    /**
+     * @depends testFirst
+     */
+    public function testSecond(Counter $counter)
+    {
+
+        $counter->increment();
+        $this->assertEquals(2, $counter->getCounter());
     }
 }
