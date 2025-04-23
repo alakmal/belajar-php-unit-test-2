@@ -8,8 +8,10 @@ use PHPUnit\Framework\TestCase;
 class CounterTest extends TestCase
 {
 
-
-    public function testCounter()
+    /**
+     * @test
+     */
+    public function Counter()
     {
         $counter = new Counter();
         $counter->increment();
