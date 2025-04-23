@@ -1,17 +1,25 @@
 {
-    "name": "alyou/belajar-php-unit-test-2",
-    "description": "belajar php unit test",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Alyou\\BelajarPhpUnitTest2\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "alyouma",
-            "email": "alyoumaakmal4@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "alyou/belajar-php-unit-test-2",
+  "description": "belajar php unit test",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Alyou\\BelajarPhpUnitTest2\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alyou\\BelajarPhpUnitTest2\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "alyouma",
+      "email": "alyoumaakmal4@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "9.5.5"
+  }
 }
