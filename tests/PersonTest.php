@@ -17,6 +17,20 @@ class PersonTest extends TestCase
     {
         $this->person = new Person("Eko");
     }
+
+
+    protected function tearDown(): void
+    {
+        echo "tear down" . PHP_EOL;
+    }
+
+    /**
+     * @after
+     */
+    protected function after()
+    {
+        echo "after" . PHP_EOL;
+    }
     public function testSucces()
     {
 
