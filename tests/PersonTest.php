@@ -10,7 +10,10 @@ class PersonTest extends TestCase
 
     private Person $person;
 
-    protected function setUp(): void
+    /**
+     * @before
+     */
+    protected function createPerson(): void
     {
         $this->person = new Person("Eko");
     }
