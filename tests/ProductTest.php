@@ -41,14 +41,18 @@ class ProductTest extends TestCase
 
     public function testDelete()
     {
-        $this->repository->expects($this->once())
-            ->method("delete");
 
         $product = new Product();
         $product->setId("1");
+        $this->repository->expects($this->once())
+            ->method("delete")
+            ->with($this->equalTo(($product)));
+
+
 
         $this->repository->expects($this->once())
             ->method("findById")
+            ->with($this->equalTo($product->getId()))
             ->willReturn($product);
 
         $this->service->delete("1");
@@ -60,6 +64,7 @@ class ProductTest extends TestCase
         $this->repository->expects($this->never())
             ->method("delete");
         $this->repository->expects($this->once())
+            ->with($this->equalTo("1"))
             ->method("findById")
             ->willReturn(null);
         $this->expectException(\Exception::class);
