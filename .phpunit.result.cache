@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"Alyou\\BelajarPhpUnitTest2\\CounterTest::testCounter":0.006,"Alyou\\BelajarPhpUnitTest2\\PersonTest::testSucces":0,"Alyou\\BelajarPhpUnitTest2\\PersonTest::testException":0.001}}
+{"version":1,"defects":[],"times":{"Alyou\\BelajarPhpUnitTest2\\CounterTest::testCounter":0.005,"Alyou\\BelajarPhpUnitTest2\\PersonTest::testSucces":0.004,"Alyou\\BelajarPhpUnitTest2\\PersonTest::testException":0.001}}

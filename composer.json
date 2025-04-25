@@ -8,7 +8,9 @@
     }
   },
   "scripts": {
-    "test": "phpunit --configuration phpunit.xml"
+    "test": "phpunit --configuration phpunit.xml",
+    "test:person": "phpunit --configuration phpunit.xml --testsuite person",
+    "test:counter": "phpunit --configuration phpunit.xml --testsuite counter"
   },
   "autoload-dev": {
     "psr-4": {

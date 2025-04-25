@@ -1,8 +1,23 @@
 <phpunit colors="true" bootstrap="vendor/autoload.php" stopOnError="true" verbose="true">
 <testsuites>
-
+<!-- all -->
 <testsuite name="belajar">
 <directory>tests</directory>
+</testsuite>
+
+
+<!-- product -->
+
+
+<testsuite name="person">
+<file>tests/PersonTest.php</file>
+</testsuite>
+
+<!-- counter -->
+
+
+<testsuite name="counter">
+<file>tests/CounterTest.php</file>
 </testsuite>
 </testsuites>
 </phpunit>
