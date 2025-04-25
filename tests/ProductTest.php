@@ -147,4 +147,27 @@ class ProductTest extends TestCase
         $this->service->register($product);
         // exception dipaangil karena method findById mengembalikan $productInDb yang sudah ada di database
     }
+
+
+    public function testDeleteSuccess()
+    {
+        $product = new Product();
+        $product->setId("1");
+
+        $this->repository->method("findById")->willReturn($product);
+
+        $this->service->delete("1");
+
+        $this->assertTrue(true, "Delete Success");
+    }
+
+    public function testDeleteFailed()
+    {
+
+        $this->expectException(\Exception::class);
+        $this->repository->method("findById")->willReturn(null);
+
+        $this->service->delete("1");
+        // exception dipanggil karena method findById mengembalikan null
+    }
 }
