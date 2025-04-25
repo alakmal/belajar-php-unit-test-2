@@ -7,6 +7,9 @@
       "Alyou\\BelajarPhpUnitTest2\\": "src/"
     }
   },
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml"
+  },
   "autoload-dev": {
     "psr-4": {
       "Alyou\\BelajarPhpUnitTest2\\": "tests/"
