@@ -59,7 +59,9 @@ class ProductTest extends TestCase
     {
         $this->repository->expects($this->never())
             ->method("delete");
-
+        $this->repository->expects($this->once())
+            ->method("findById")
+            ->willReturn(null);
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage("Product is not found");
 
